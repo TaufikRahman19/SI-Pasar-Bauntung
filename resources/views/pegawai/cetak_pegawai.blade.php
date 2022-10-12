@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laporan Data Pegawai</title>
+</head>
+<table align="center">
+    <tr>
+        <td><img src="{{'assets/img/logo_bjb.png'}}" width="150" height="120"></td>
+        <td><center>
+            <font size="4"><b>PEMERINTAH KOTA BANJARBARU</b></font><br>
+            <font size="5"><b>DINAS PERDAGANGAN KOTA BANJARBARU <br> UPT. PASAR BAUNTUNG BANJARBARU</b></font><br>
+            <font size="2"><i>Alamat: Jl. R. O. Ulin Banjarbaru Telp (0511) 4772154, email : uptpasarbauntungbanjarbaru@gmail.com</i></font></center>
+        </td>
+    </tr>
+    <tr>
+        <br>
+    </tr>
+</table>
+<hr>
+<br>
+<table align="center">
+    <tr>
+        <td>Nomor</td>
+        <td width="635">:  BJB/IN/UPT.Pasar.Bauntung/2022</td>
+    </tr>
+    <tr>
+        <td>Lampiran</td>
+        <td width="635">: 1 (satu) Lembar</td>
+    </tr>
+    <tr>
+        <td>Perihal</td>
+        <td width="635">: Laporan Pegawai</td>
+    </tr>
+</table>
+<div class="form-group">
+<br>
+<br>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th width="50">No.</th>
+                <th width="250">NIK</th>
+                <th width="300">Nama Pegawai</th>
+                <th width="200">Jabatan</th>
+                <th width="200">Jenis Kelamin</th>
+                <th width="200">No Telepon</th>
+                <th width="200">Status</th>
+                {{-- <th>TMT</th>
+                <th>SK Pegawai</th> --}}
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($pegawais as $pegawai)
+            <tr>
+                <td>{{$loop->iteration}}</td>
+                <td>{{$pegawai->nik_pegawai}}</td>
+                <td>{{$pegawai->nama_pegawai}}</td>
+                <td><center>{{$pegawai->jabatan}}</center></td>
+                <td><center>{{$pegawai->jeniskelamin}}</center></td>
+                <td><center>{{$pegawai->notelpon}}</center></td>
+                <td><center>{{$pegawai->status}}</center></td>
+                {{-- <td>{{$pegawai->tmt}}</td>
+                <td><center>@if ($pegawai->sk_pegawai)
+                    Ada
+                    @else
+                    Tidak Ada Data
+                @endif
+            </center>
+                </td> --}}
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<br>
+<table align="right">
+    <tr>
+        <td>An. Kepala UPT. Pasar Bauntung Banjarbaru <br><center> Kasubbag TU,</center></td>
+    </tr>
+    <tr>
+        <td height="60"></td>
+    </tr>
+    <tr>
+        <td><center><b><u>LISA INDRANYLA,S.KOM</u></b></center></td>
+    </tr>
+    <tr>
+        <td><center>NIP. 19780823 200604 2 024</center></td>
+    </tr>
+</table>
+<body>
+
+
+
+    <script type="text/javascript">
+        window.print();
+</script>
+</body>
+</html>
